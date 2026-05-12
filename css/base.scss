@@ -1,0 +1,92 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 100;
+  src: local('Pretendard-Thin'),
+  url('../font/Pretendard-Thin.woff') format('woff');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 200;
+  src: local('Pretendard-ExtraLight'),
+  url('../font/Pretendard-ExtraLight.woff') format('woff');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 300;
+  src: local('Pretendard-Light'),
+  url('../font/Pretendard-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  src: local('Pretendard-Regular'),
+  url('../font/Pretendard-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  src: local('Pretendard-Medium'),
+  url('../font/Pretendard-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  src: local('Pretendard-SemiBold'),
+  url('../font/Pretendard-SemiBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  src: local('Pretendard-Bold'),
+  url('../font/Pretendard-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 800;
+  src: local('Pretendard-ExtraBold'),
+  url('../font/Pretendard-ExtraBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 900;
+  src: local('Pretendard-Black'),
+  url('../font/Pretendard-Black.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+  min-width: 100%; min-height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	font-size: 1.7rem;
+	line-height: 150%;
+	font-family: "Pretendard";
+  font-weight: 400;
+	color: #1D1D1D;
+	scroll-behavior: smooth;
+}
+
+a, button {
+  transition: 0.3s; display: inline-block;
+  border-radius: 0.4rem;
+}
+
+// *:focus,
+// a:active, button:active,
+// a:target, button:target {
+//   background: rgba(0,0,0,0.1);
+//   outline: 0.1rem solid rgba(0,0,0,0.3);
+// }
+// a:hover, button:hover {
+//   background: rgba(0,0,0,0.2);
+//   outline: 0.1rem solid rgba(0,0,0,0.3);
+// }
