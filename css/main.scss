@@ -371,21 +371,21 @@ main {
 			background-color: #FF6157;
 			border-color: #E24640;
 			&::before {
-				background-image: url("/image/icon_close.svg");
+				background-image: url("../image/icon_close.svg");
 			}
 		}
 		&.miniFolder {
 			background-color: #FFC12F;
 			border-color: #DFA023;
 			&::before {
-				background-image: url("/image/icon_minimize.svg");
+				background-image: url("../image/icon_minimize.svg");
 			}
 		}
 		&.zoomFolder {
 			background-color: #2ACB42;
 			border-color: #1BAC2C;
 			&::before {
-				background-image: url("/image/icon_zoom.svg");
+				background-image: url("../image/icon_zoom.svg");
 			}
 		}
 	}

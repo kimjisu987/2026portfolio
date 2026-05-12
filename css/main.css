@@ -504,21 +504,21 @@ main {
   border-color: #E24640;
 }
 .circle-wrap a.closeFolder::before {
-  background-image: url("/image/icon_close.svg");
+  background-image: url("../image/icon_close.svg");
 }
 .circle-wrap a.miniFolder {
   background-color: #FFC12F;
   border-color: #DFA023;
 }
 .circle-wrap a.miniFolder::before {
-  background-image: url("/image/icon_minimize.svg");
+  background-image: url("../image/icon_minimize.svg");
 }
 .circle-wrap a.zoomFolder {
   background-color: #2ACB42;
   border-color: #1BAC2C;
 }
 .circle-wrap a.zoomFolder::before {
-  background-image: url("/image/icon_zoom.svg");
+  background-image: url("../image/icon_zoom.svg");
 }
 
 .folder-body .circle-wrap {
