@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/remixicon.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/jquery-1.12.3.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-left">
+            <ul class="nav">
+                <li class="depth1">
+                    <a href="#" class="main-cnt"><img src="/image/icon_apple.svg" alt=""></a>
+                    <ul class="nav-list sub-list" style="display: none;">
+                        <li class="depth2"><a href="#">About Me</a></li>
+                    </ul>
+                </li>
+                <li class="depth1">
+                    <a href="#" class="main-cnt">Kimjisu</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-right">
+            <p class="time"></p>
+        </div>
+    </header>
+    <main>
+        <ul class="mainBack">
+            <li class="depth1">
+                <a class="folder-cnt ico-fol" href="#" data-target="profile">
+                    <img src="/image/icon_folder.svg" alt="">
+                    <p class="folder-name">프로필</p>
+                </a>
+                <ul class="sub-list">
+                    <li class="depth2"><a href="#" data-target="${targetClass}">Open</a></li>
+                </ul>
+            </li>
+            <li class="depth1">
+                <a class="folder-cnt ico-fol" href="#" data-target="career">
+                    <img src="/image/icon_folder.svg" alt="">
+                    <p class="folder-name">경력</p>
+                </a>
+            </li>
+            <li class="depth1">
+                <a class="folder-cnt ico-fol" href="#" data-target="project-com">
+                    <img src="/image/icon_folder.svg" alt="">
+                    <p class="folder-name">실무 프로젝트</p>
+                </a>
+            </li>
+            <li class="depth1">
+                <a class="folder-cnt ico-fol" href="#" data-target="project-per">
+                    <img src="/image/icon_folder.svg" alt="">
+                    <p class="folder-name">개인 프로젝트</p>
+                </a>
+            </li>
+            <li class="depth1">
+                <a class="folder-cnt ico-fol" href="#" data-target="project-team">
+                    <img src="/image/icon_folder.svg" alt="">
+                    <p class="folder-name">팀 프로젝트</p>
+                </a>
+            </li>
+            <li class="depth1">
+                <a class="folder-cnt ico-fol" href="#" data-target="certificate">
+                    <img src="/image/icon_folder.svg" alt="">
+                    <p class="folder-name">자격증</p>
+                </a>
+            </li>
+            <!-- <li class="depth1">
+                <a class="folder-cnt ico-fol" href="#" data-target="contact">
+                    <img src="/image/icon_folder.svg" alt="">
+                    <p class="folder-name">연락처</p>
+                </a>
+            </li> -->
+            <!-- <li class="depth1">
+                <a class="folder-cnt ico-fol" href="#" data-target="app">
+                    <img src="/image/icon_folder.svg" alt="">
+                    <p class="folder-name">App</p>
+                </a>
+            </li> -->
+        </ul>
+        <div class="drag-folder main" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <!-- 팝 레프트메뉴 -->
+                <div class="header-list">
+                    <ul>
+                        <li class="list-type folder">
+                            <p class=" title">Folder</p>
+                            <ul class="folder-list">
+                                <li>
+                                    <a href="#" data-list="">
+                                        <i class="ri-folder-6-line"></i>
+                                        <p class="name">Folder name1</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="folder-body">
+                <div class="body-top">
+                    <p class="circle-wrap">
+                        <a href="#" class="closeFolder"></a>
+                        <a href="#" class="miniFolder"></a>
+                        <a href="#" class="zoomFolder"></a>
+                    </p>
+                    <div class="arrow-wrap">
+                        <a href="#" class="folder-prev disabled">
+                            <i class="ri-arrow-left-s-line"></i>
+                        </a>
+                        <a href="#" class="folder-next disabled">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </a>
+                    </div>
+                    <div class="txt-wrap">
+                        <h3 class="tit">folder name1</h3>
+                    </div>
+                </div>
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main" data-folder="profile">
+                    <div class="depth2">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt none ico-notion dbl-link" href="#" data-url="https://www.notion.so/156f3a26009a803ea178e6d44e33faeb?source=copy_link">
+                                    <img src="/image/icon_notion.svg" alt="">
+                                    <p class="folder-name">노션 이력서</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt none ico-contact" href="#" data-app="contacts-profile">
+                                    <img src="/image/icon_contacts.svg" alt="">
+                                    <p class="folder-name">프로필</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt none ico-doc" href="#" data-app="document-skill">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">스킬</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body-main" data-folder="career">
+                    <div class="depth2">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt none ico-graph" href="#" data-app="graph-career1">
+                                    <img src="/image/icon_grapher.svg" alt="">
+                                    <p class="folder-name">전문분야</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt none ico-graph" href="#" data-app="graph-career2">
+                                    <img src="/image/icon_grapher.svg" alt="">
+                                    <p class="folder-name">전문분야 외 업무 경험</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body-main" data-folder="project-com">
+                    <div class="depth2">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="krc">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">대한적십자사</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="jecheon">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">제천시 농촌재생 통합지원플랫폼</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="daegu">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">대구광역시학원총연합회</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="dga">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">DGA학원KEY</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="dongne">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">동네학원 랜딩페이지</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 팝 3뎁스메뉴 -->
+                    <div class="depth3" data-depth="krc">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="notes-krc">
+                                    <img src="/image/icon_notes.svg" alt="">
+                                    <p class="folder-name">프로젝트 소개</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-note dbl-link" href="#" data-url="https://www.redcross.or.kr/main/main.do">
+                                    <img src="/image/icon_safari.svg" alt="">
+                                    <p class="folder-name">구현페이지</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-page" href="#" data-app="alert-krc2">
+                                    <img src="/image/icon_pages.svg" alt="">
+                                    <p class="folder-name">트러블슈팅</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="depth3" data-depth="jecheon">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="notes-jecheon">
+                                    <img src="/image/icon_notes.svg" alt="">
+                                    <p class="folder-name">프로젝트 소개</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="alert-jecheon1">
+                                    <img src="/image/icon_safari.svg" alt="">
+                                    <p class="folder-name">구현페이지</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-page" href="#" data-app="alert-jecheon2">
+                                    <img src="/image/icon_pages.svg" alt="">
+                                    <p class="folder-name">트러블슈팅</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="depth3" data-depth="daegu">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="notes-daegu">
+                                    <img src="/image/icon_notes.svg" alt="">
+                                    <p class="folder-name">프로젝트 소개</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="alert-daegu1">
+                                    <img src="/image/icon_safari.svg" alt="">
+                                    <p class="folder-name">구현페이지</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-page" href="#" data-app="alert-daegu2">
+                                    <img src="/image/icon_pages.svg" alt="">
+                                    <p class="folder-name">트러블슈팅</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="depth3" data-depth="dga">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="notes-dga">
+                                    <img src="/image/icon_notes.svg" alt="">
+                                    <p class="folder-name">프로젝트 소개</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="alert-dga1">
+                                    <img src="/image/icon_safari.svg" alt="">
+                                    <p class="folder-name">구현페이지</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-page" href="#" data-app="alert-dga2">
+                                    <img src="/image/icon_pages.svg" alt="">
+                                    <p class="folder-name">트러블슈팅</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="depth3" data-depth="dongne">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="notes-dongne">
+                                    <img src="/image/icon_notes.svg" alt="">
+                                    <p class="folder-name">프로젝트 소개</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="alert-dongne1">
+                                    <img src="/image/icon_safari.svg" alt="">
+                                    <p class="folder-name">구현페이지</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-page" href="#" data-app="alert-dongne2">
+                                    <img src="/image/icon_pages.svg" alt="">
+                                    <p class="folder-name">트러블슈팅</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body-main" data-folder="project-per">
+                    <div class="depth2">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="jejudog">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">제주독</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="todo">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">리액트 투두리스트</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="modong">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">모동숲 포트폴리오</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 팝 3뎁스메뉴 -->
+                    <div class="depth3" data-depth="jejudog">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="notes-jejudog">
+                                    <img src="/image/icon_notes.svg" alt="">
+                                    <p class="folder-name">프로젝트 소개</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="alert-jejudog1">
+                                    <img src="/image/icon_safari.svg" alt="">
+                                    <p class="folder-name">구현페이지</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-page dbl-link" href="#" data-url="https://www.notion.so/98f5c79527ca45e9b1ef8636dc4dc8b9?source=copy_link">
+                                    <img src="/image/icon_pages.svg" alt="">
+                                    <p class="folder-name">트러블슈팅</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="depth3" data-depth="todo">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="notes-todo">
+                                    <img src="/image/icon_notes.svg" alt="">
+                                    <p class="folder-name">프로젝트 소개</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-note dbl-link" href="#" data-url="https://kimjisu987.github.io/todolist/">
+                                    <img src="/image/icon_safari.svg" alt="">
+                                    <p class="folder-name">구현페이지</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-page dbl-link" href="#" data-url="https://www.notion.so/ffff3a26009a81dab0f7e7cf098ee10f?source=copy_link">
+                                    <img src="/image/icon_pages.svg" alt="">
+                                    <p class="folder-name">트러블슈팅</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="depth3" data-depth="modong">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="notes-modong">
+                                    <img src="/image/icon_notes.svg" alt="">
+                                    <p class="folder-name">프로젝트 소개</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-note dbl-link" href="#" data-url="https://kimjisu987.github.io/portfoliogame">
+                                    <img src="/image/icon_safari.svg" alt="">
+                                    <p class="folder-name">구현페이지</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-page dbl-link" href="#" data-url="https://www.notion.so/f4564dff5c934c1e81c8de7b94f3c2db?source=copy_link">
+                                    <img src="/image/icon_pages.svg" alt="">
+                                    <p class="folder-name">트러블슈팅</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body-main" data-folder="project-team">
+                    <div class="depth2">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="samsung">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">삼성중공업</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="sfa">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">SFA LMS 학습지원</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 팝 3뎁스메뉴 -->
+                    <div class="depth3" data-depth="samsung">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="notes-samsung">
+                                    <img src="/image/icon_notes.svg" alt="">
+                                    <p class="folder-name">프로젝트 소개</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-note dbl-link" href="#" data-url="https://kimjisu987.github.io/samsungshi/">
+                                    <img src="/image/icon_safari.svg" alt="">
+                                    <p class="folder-name">구현페이지</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-page dbl-link" href="#" data-url="https://www.notion.so/102f3a26009a804ab488d68d9bc6a609?source=copy_link">
+                                    <img src="/image/icon_pages.svg" alt="">
+                                    <p class="folder-name">트러블슈팅</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="depth3" data-depth="sfa">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt ico-note" href="#" data-app="notes-sfa">
+                                    <img src="/image/icon_notes.svg" alt="">
+                                    <p class="folder-name">프로젝트 소개</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-note dbl-link" href="#" data-url="https://kimjisu1.dothome.co.kr/sfa/">
+                                    <img src="/image/icon_safari.svg" alt="">
+                                    <p class="folder-name">구현페이지</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt ico-page dbl-link" href="#" data-url="https://www.notion.so/102f3a26009a801da013fbc9cdff157d?source=copy_link">
+                                    <img src="/image/icon_pages.svg" alt="">
+                                    <p class="folder-name">트러블슈팅</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body-main" data-folder="certificate">
+                    <div class="depth2">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="design">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">디자인 관련 자격증</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="oa">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">OA 관련 자격증</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-target="etc">
+                                    <img src="/image/icon_folder.svg" alt="">
+                                    <p class="folder-name">기타 자격증</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 팝 2뎁스메뉴 -->
+                    <div class="depth3" data-depth="design">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt" href="#" data-app="alert-cer-design6">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">웹디자인기능사</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-app="alert-cer-design5">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">전자출판기능사</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-app="alert-cer-design4">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">컴퓨터그래픽스운용기능사</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-app="alert-cer-design3">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">GTQid(그래픽기술자격 인디자인) 1급</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-app="alert-cer-design2">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">GTQi(그래픽기술자격 일러스트) 1급</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-app="alert-cer-design1">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">GTQ(그래픽기술자격 포토샵) 1급</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 팝 2뎁스메뉴 -->
+                    <div class="depth3" data-depth="oa">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt" href="#" data-app="alert-cer-oa4">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">정보기술자격(ITQ) 아래한글 A등급</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-app="alert-cer-oa3">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">정보기술자격(ITQ) 인터넷 A등급</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-app="alert-cer-oa2">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">정보기술자격(ITQ) 한글엑셀(한셀) A등급</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-app="alert-cer-oa1">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">정보기술자격(ITQ) 한글파워포인트 A등급</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 팝 2뎁스메뉴 -->
+                    <div class="depth3" data-depth="etc">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt" href="#" data-app="alert-cer-etc2">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">TESAT 2등급</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt" href="#" data-app="alert-cer-etc1">
+                                    <img src="/image/icon_document.svg" alt="">
+                                    <p class="folder-name">자동차운전면허증 2종보통</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="body-main" data-folder="contact">
+                    <div class="depth2">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt none" href="#" data-target="drag-folder1">
+                                    <img src="/image/icon_notion.svg" alt="">
+                                    <p class="folder-name">노션 이력서</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt none" href="#" data-target="drag-folder1">
+                                    <img src="/image/icon_contacts.svg" alt="">
+                                    <p class="folder-name">연락처</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt none" href="#" data-target="drag-folder1">
+                                    <img src="/image/icon_contacts.svg" alt="">
+                                    <p class="folder-name">스킬</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+                <!-- <div class="body-main" data-folder="app">
+                    <div class="depth2">
+                        <ul>
+                            <li>
+                                <a class="folder-cnt none" href="#" data-target="drag-folder1">
+                                    <img src="/image/icon_calculator.svg" alt="">
+                                    <p class="folder-name">계산기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt none" href="#" data-target="drag-folder1">
+                                    <img src="/image/icon_calendar.svg" alt="">
+                                    <p class="folder-name">달력</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="folder-cnt none" href="#" data-target="drag-folder1">
+                                    <img src="/image/icon_weather.svg" alt="">
+                                    <p class="folder-name">날씨</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="drag-folder sub contact" data-app="contacts-profile" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">프로필</h3>
+                </div>
+            </div>
+            <div class="folder-body">
+                <div class="body-top">
+                    <div class="img_box"><img src="/image/profile.png" alt=""></div>
+                    <div class="txt_box">
+                        <p class="name">Kim Jisu</p>
+                        <p class="date"></p>
+                    </div>
+                </div>
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="event list_wrap">
+                        <div class="inner">
+                            <div class="icon_box">
+                                <i class="ri-calendar-2-line"></i>
+                            </div>
+                            <div class="txt_box">
+                                <p class="tit">Upcoming Event:</p>
+                                <p class="sub">최신 업데이트 일자</p>
+                                <p class="date">2025.07.27</p>
+                            </div>
+                            <div class="close_box">
+                                <button type="button" class="close_btn"><i class="ri-close-line"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_wrap">
+                        <div class="inner">
+                            <dl>
+                                <dt><i class="ri-phone-fill"></i> Phone:</dt>
+                                <dd><a href="sms:010-6637-5153" title="문자보내기">010-6637-5153</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><i class="ri-mail-fill"></i> Email:</dt>
+                                <dd><a href="mailto:9one1ndex@gmail.com" title="메일보내기">9one1ndex@gmail.com</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="list_wrap">
+                        <div class="inner">
+                            <dl>
+                                <dt><i class="ri-home-9-fill"></i> Home:</dt>
+                                <dd>서울시 중랑구</dd>
+                            </dl>
+                            <dl>
+                                <dt><i class="ri-briefcase-4-fill"></i> Work:</dt>
+                                <dd>케이엘정보통신(주)</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub document" data-app="document-skill" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">스킬</h3>
+                </div>
+                <div class="zoom-wrap">
+                    <div class="icon_box">
+                        <button type="button" class="zoom-in"><i class="ri-zoom-in-line"></i></button>
+                        <button type="button" class="zoom-out"><i class="ri-zoom-out-line"></i></button>
+                    </div>
+                    <p class="txt">Zoom</p>
+                </div>
+            </div>
+            <div class="folder-body">
+                <div class="body-wrap">
+                    <div class="body-top">
+                        <h3>Skill</h3>
+                    </div>
+                    <!-- 팝 1뎁스메뉴 -->
+                    <div class="body-main">
+                        <ul class="skill_list">
+                            <li>
+                                <p class="skill_name"><i class="ri-html5-line" aria-hidden="true"></i> HTML5</p>
+                                <div class="skill_bar" data-skill="90%">
+                                    <span class="bar-fill"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="skill_name"><i class="ri-css3-line" aria-hidden="true"></i> CSS3</p>
+                                <div class="skill_bar" data-skill="90%">
+                                    <span class="bar-fill"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="skill_name"><i class="ri-code-s-slash-line" aria-hidden="true"></i> SCSS</p>
+                                <div class="skill_bar" data-skill="70%">
+                                    <span class="bar-fill"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="skill_name"><i class="ri-javascript-line" aria-hidden="true"></i> JavaScript</p>
+                                <div class="skill_bar" data-skill="50%">
+                                    <span class="bar-fill"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="skill_name"><i class="ri-code-s-slash-line" aria-hidden="true"></i> jQuery</p>
+                                <div class="skill_bar" data-skill="70%">
+                                    <span class="bar-fill"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub graph" data-app="graph-career1" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">전문분야</h3>
+                </div>
+                <div class="zoom-wrap">
+                    <div class="icon_box">
+                        <button type="button" class="zoom-in"><i class="ri-zoom-in-line"></i></button>
+                        <button type="button" class="zoom-out"><i class="ri-zoom-out-line"></i></button>
+                    </div>
+                    <p class="txt">Zoom</p>
+                </div>
+            </div>
+            <div class="folder-body">
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="graph-wrap">
+                        <div class="career1">
+                            <div class="txt_box">
+                                <p class="com_name">㈜케이엘정보통신</p>
+                                <p class="com_time"><i class="ri-calendar-2-line" aria-hidden="true"></i> <span class="start">2025.02</span> ~ <span class="end">재직중</span> <span class="com_tag"></span></p>
+                                <p><i class="ri-team-line" aria-hidden="true"></i> R&D사업본부 개발사업5부 개발1팀 <span class="com_tag">퍼블리셔</span></p>
+                                <ul class="com_list">
+                                    <li>
+                                        <p class="date">
+                                            <span class="start">2025.02</span> ~ <span class="end">2025.02</span>
+                                            <span class="com_tag">종료</span>
+                                        </p>
+                                        <p class="project-name">대한적십자사 홈페이지 및 CMS 전면 재구축 사업</p>
+                                    </li>
+                                    <li>
+                                        <p class="date">
+                                            <span class="start">2026.02</span> ~ <span class="end">2026.06</span>
+                                            <span class="com_tag">진행중</span>
+                                        </p>
+                                        <p class="project-name">정신의료기관 응급병상정보 공유시스템 고도화</p>
+                                    </li>
+                                    <li>
+                                        <p class="date">
+                                            <span class="start">2026.03</span> ~ <span class="end">2026.10</span>
+                                            <span class="com_tag">진행중</span>
+                                        </p>
+                                        <p class="project-name">한국발명진흥회 재구축</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="career2">
+                            <div class="txt_box">
+                                <p class="com_name">스마트러닝코리아㈜</p>
+                                <p class="com_time"><i class="ri-calendar-2-line" aria-hidden="true"></i> <span class="start">2024.10</span> ~ <span class="end">2025.01</span> <span class="com_tag"></span></p>
+                                <p><i class="ri-team-line" aria-hidden="true"></i> 개발기획본부 <span class="com_tag">UI/UX디자이너 & 퍼블리셔</span></p>
+                                <ul class="com_list">
+                                    <li>
+                                        <p class="date">
+                                            <span class="start">2024.10</span> ~ <span class="end">2024.11</span>
+                                            <span class="com_tag">종료</span>
+                                        </p>
+                                        <p class="project-name">제천시농촌신활력플러스사업추진단 홈페이지 구축</p>
+                                    </li>
+                                    <li>
+                                        <p class="date">
+                                            <span class="start">2024.11</span> ~ <span class="end">2024.11</span>
+                                            <span class="com_tag">종료</span>
+                                        </p>
+                                        <p class="project-name">ESL 모바일 퍼블리싱</p>
+                                    </li>
+                                    <li>
+                                        <p class="date">
+                                            <span class="start">2024.11</span> ~ <span class="end">2024.12</span>
+                                            <span class="com_tag">종료</span>
+                                        </p>
+                                        <p class="project-name">대구광역시학원총연합회 마케팅 플랫폼 1차 구축</p>
+                                    </li>
+                                    <li>
+                                        <p class="date">
+                                            <span class="start">2024.12</span> ~ <span class="end">2024.12</span>
+                                            <span class="com_tag">종료</span>
+                                        </p>
+                                        <p class="project-name">DGA학원KEY 플랫폼 1차 구축</p>
+                                    </li>
+                                    <li>
+                                        <p class="date">
+                                            <span class="start">2025.01</span> ~ <span class="end">2025.01</span>
+                                            <span class="com_tag">종료</span>
+                                        </p>
+                                        <p class="project-name">동네학원 랜딩페이지 리뉴얼</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub graph" data-app="graph-career2" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">전문분야 외</h3>
+                </div>
+                <div class="zoom-wrap">
+                    <div class="icon_box">
+                        <button type="button" class="zoom-in"><i class="ri-zoom-in-line"></i></button>
+                        <button type="button" class="zoom-out"><i class="ri-zoom-out-line"></i></button>
+                    </div>
+                    <p class="txt">Zoom</p>
+                </div>
+            </div>
+            <div class="folder-body">
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="graph-wrap">
+                        <!-- <div class="career3">
+                            <div class="txt_box">
+                                <p class="com_name">프리랜서 (개인사업자)</p>
+                                <p class="com_time"><i class="ri-calendar-2-line" aria-hidden="true"></i> <span class="start">2013.09</span> ~ <span class="end">2019.09</span> <span class="com_tag"></span></p>
+                                <ul class="com_list">
+                                    <li>
+                                        <p class="project-name">의류 인터넷쇼핑몰 운영</p>
+                                    </li>
+                                    <li>
+                                        <p class="date">
+                                            <span class="start">2018.03</span> ~ <span class="end">2018.05</span>
+                                        </p>
+                                        <p class="project-name">앵무새 포스터 제작 판매 (텀블벅)</p>
+                                    </li>
+                                    <li>
+                                        <p class="date">
+                                            <span class="start">2018.04</span> ~ <span class="end">2018.11</span>
+                                        </p>
+                                        <p class="project-name">뱃지북 제작 판매 (텀블벅)</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+                        <div class="career4">
+                            <div class="txt_box">
+                                <p class="com_name">㈜가방클럽</p>
+                                <p class="com_time"><i class="ri-calendar-2-line" aria-hidden="true"></i> <span class="start">2021.02</span> ~ <span class="end">2023.07</span> <span class="com_tag"></span></p>
+                                <p><i class="ri-team-line" aria-hidden="true"></i> 경영지원팀 <span class="com_tag">디자이너</span></p>
+                                <ul class="com_list">
+                                    <li>
+                                        <p class="project-name">가방 디자인 및 작업지시서 작성</p>
+                                    </li>
+                                    <li>
+                                        <p class="project-name">인쇄 시안 및 분판 작업</p>
+                                    </li>
+                                    <li>
+                                        <p class="project-name">상세페이지 제작 및 이미지 보정 작업</p>
+                                    </li>
+                                    <li>
+                                        <p class="project-name">홈페이지 관리</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="career5">
+                            <div class="txt_box">
+                                <p class="com_name">세븐뷰티코리아㈜</p>
+                                <p class="com_time"><i class="ri-calendar-2-line" aria-hidden="true"></i> <span class="start">2017.06</span> ~ <span class="end">2020.06</span> <span class="com_tag"></span></p>
+                                <p><i class="ri-team-line" aria-hidden="true"></i> 경영지원팀 <span class="com_tag">사무직</span></p>
+                                <ul class="com_list">
+                                    <li>
+                                        <p class="project-name">자사몰 및 오픈마켓 관리</p>
+                                    </li>
+                                    <li>
+                                        <p class="project-name">재고 및 출고 관리</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="career6">
+                            <div class="txt_box">
+                                <p class="com_name">할리스커피</p>
+                                <p class="com_time"><i class="ri-calendar-2-line" aria-hidden="true"></i> <span class="start">2014.07</span> ~ <span class="end">2016.10</span> <span class="com_tag"></span></p>
+                                <p><i class="ri-team-line" aria-hidden="true"></i> <span class="com_tag">바리스타</span></p>
+                                <ul class="com_list">
+                                    <li>
+                                        <p class="project-name">커피 및 베이커리 제조</p>
+                                    </li>
+                                    <li>
+                                        <p class="project-name">재료 발주 및 매장 관리</p>
+                                    </li>
+                                    <li>
+                                        <p class="project-name">직원 교육</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub notes" data-app="notes-krc" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">대한적십자사</h3>
+                </div>
+            </div>
+            <div class="folder-body">
+                <!-- <div class="body-top">
+                    2024.10 ~ 2024.11
+                </div> -->
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="note-wrap">
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">대한적십자사 대표홈페이지</h3>
+                                    <h4 class="tit2">대한적십자사 홈페이지 및 CMS 전면 재구축 사업</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2025/03 ~ 2026/02</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>90%
+                                                <span class="com_tag">퍼블리싱</span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>웹와치 웹접근성 품질 인증</dt>
+                                            <dd>2026/1/5 ~ 2027/1/4</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_webwatch.png" alt="웹접근성마크"></li>
+                                        <li><img src="./image/ico_eclipse.png" alt="이클립스"></li>
+                                        <li><img src="./image/ico_vscode.png" alt="비주얼스튜디오코드"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_css.png" alt="CSS3"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <a class="btn-link" href="https://www.redcross.or.kr/main/main.do" title="새창열림" target="_blank">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img long">
+                                        <img src="./image/krc_rolling1.png" alt="대한적십자사 대표홈페이지">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">대한적십자사 지사 홈페이지</h3>
+                                    <h4 class="tit2">대한적십자사 홈페이지 및 CMS 전면 재구축 사업</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2025/02 ~ 2026/02</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>80%
+                                                <span class="com_tag">퍼블리싱</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_eclipse.png" alt="이클립스"></li>
+                                        <li><img src="./image/ico_vscode.png" alt="비주얼스튜디오코드"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_css.png" alt="CSS3"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <a class="btn-link" href="https://www.redcross.or.kr/seoul/main.do" title="새창열림" target="_blank">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img">
+                                        <img src="./image/krc_rolling2.png" alt="대한적십자사 지사홈페이지">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">대한적십자사 인도법연구소</h3>
+                                    <h4 class="tit2">대한적십자사 홈페이지 및 CMS 전면 재구축 사업</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2025/02 ~ 2026/02</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>90%
+                                                <span class="com_tag">퍼블리싱</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_eclipse.png" alt="이클립스"></li>
+                                        <li><img src="./image/ico_vscode.png" alt="비주얼스튜디오코드"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_css.png" alt="CSS3"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <a class="btn-link" href="https://www.redcross.or.kr/ihl/main.do" title="새창열림" target="_blank">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img">
+                                        <img src="./image/krc_rolling3.png" alt="대한적십자사 인도법연구소">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">대한적십자사 APDRC</h3>
+                                    <h4 class="tit2">대한적십자사 홈페이지 및 CMS 전면 재구축 사업</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2025/02 ~ 2026/02</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>100%
+                                                <span class="com_tag">퍼블리싱</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_eclipse.png" alt="이클립스"></li>
+                                        <li><img src="./image/ico_vscode.png" alt="비주얼스튜디오코드"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_css.png" alt="CSS3"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <a class="btn-link" href="https://www.redcross.or.kr/apdrc/main.do" title="새창열림" target="_blank">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img">
+                                        <img src="./image/krc_rolling4.png" alt="대한적십자사 APDRC">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">대한적십자사 재난심리회복지원센터</h3>
+                                    <h4 class="tit2">대한적십자사 홈페이지 및 CMS 전면 재구축 사업</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2025/02 ~ 2026/02</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>70%
+                                                <span class="com_tag">퍼블리싱</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_eclipse.png" alt="이클립스"></li>
+                                        <li><img src="./image/ico_vscode.png" alt="비주얼스튜디오코드"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_css.png" alt="CSS3"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <a class="btn-link" href="https://www.redcross.or.kr/recovery/main.do" title="새창열림" target="_blank">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img">
+                                        <img src="./image/krc_rolling5.png" alt="대한적십자사 재난심리회복지원센터">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">대한적십자사 실시간재난구호</h3>
+                                    <h4 class="tit2">대한적십자사 홈페이지 및 CMS 전면 재구축 사업</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2025/02 ~ 2026/02</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>100%
+                                                <span class="com_tag">퍼블리싱</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_eclipse.png" alt="이클립스"></li>
+                                        <li><img src="./image/ico_vscode.png" alt="비주얼스튜디오코드"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_css.png" alt="CSS3"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <a class="btn-link" href="https://www.redcross.or.kr/disaster/main.do" title="새창열림" target="_blank">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img">
+                                        <img src="./image/krc_rolling6.png" alt="대한적십자사 실시간재난구호">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub notes" data-app="notes-jecheon" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">제천시 농촌재생 통합지원플랫폼</h3>
+                </div>
+            </div>
+            <div class="folder-body">
+                <!-- <div class="body-top">
+                    2024.10 ~ 2024.11
+                </div> -->
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="note-wrap">
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">제천시 농촌재생 통합지원플랫폼</h3>
+                                    <h4 class="tit2">제천시 농촌 신활력 플러스 사업 추진단 홈페이지 구축</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2024/10 ~ 2024/11</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>70%
+                                                <span class="com_tag">UI/UX디자인</span>
+                                                <span class="com_tag">퍼블리싱</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_intellij.png" alt="인텔리제이"></li>
+                                        <li><img src="./image/ico_github.png" alt="깃허브"></li>
+                                        <li><img src="./image/ico_figma.png" alt="피그마"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_sass.png" alt="Sass"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <a class="btn-link" href="#" data-app="alert-jecheon1">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img long">
+                                        <img src="./image/jecheon_rolling.png" alt="제천시 농촌재생 통합지원플랫폼">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub notes" data-app="notes-daegu" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">대구광역시학원총연합회</h3>
+                </div>
+            </div>
+            <div class="folder-body">
+                <!-- <div class="body-top">
+                    2024.10 ~ 2024.11
+                </div> -->
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="note-wrap">
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">대구광역시학원총연합회</h3>
+                                    <h4 class="tit2">대구광역시학원총연합회 마케팅 플랫폼 구축</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2024/11 ~ 2024/12</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>100%
+                                                <span class="com_tag">UI/UX디자인</span>
+                                                <span class="com_tag">퍼블리싱</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_intellij.png" alt="인텔리제이"></li>
+                                        <li><img src="./image/ico_github.png" alt="깃허브"></li>
+                                        <li><img src="./image/ico_figma.png" alt="피그마"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_sass.png" alt="Sass"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <a class="btn-link" href="#" data-app="alert-daegu1">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img long">
+                                        <img src="./image/daegu_rolling.png" alt="대구광역시학원총연합회">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub notes" data-app="notes-dga" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">DGA학원KEY</h3>
+                </div>
+            </div>
+            <div class="folder-body">
+                <!-- <div class="body-top">
+                    2024.10 ~ 2024.11
+                </div> -->
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="note-wrap">
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">DGA학원KEY</h3>
+                                    <h4 class="tit2">DGA학원KEY 플랫폼 구축</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2024/12 ~ 2024/12</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>100%
+                                                <span class="com_tag">UI/UX디자인</span>
+                                                <span class="com_tag">퍼블리싱</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_intellij.png" alt="인텔리제이"></li>
+                                        <li><img src="./image/ico_github.png" alt="깃허브"></li>
+                                        <li><img src="./image/ico_figma.png" alt="피그마"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_sass.png" alt="Sass"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <a class="btn-link" href="#" data-app="alert-dga1">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img long">
+                                        <img src="./image/dga_rolling.png" alt="DGA학원KEY">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub notes" data-app="notes-dongne" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">동네학원 랜딩페이지</h3>
+                </div>
+            </div>
+            <div class="folder-body">
+                <!-- <div class="body-top">
+                    2024.10 ~ 2024.11
+                </div> -->
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="note-wrap">
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">동네학원 랜딩페이지</h3>
+                                    <h4 class="tit2">동네학원 랜딩페이지 리뉴얼</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2025/01 ~ 2025/01</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>100%
+                                                <span class="com_tag">UI/UX디자인</span>
+                                                <span class="com_tag">퍼블리싱</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_intellij.png" alt="인텔리제이"></li>
+                                        <li><img src="./image/ico_github.png" alt="깃허브"></li>
+                                        <li><img src="./image/ico_figma.png" alt="피그마"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_sass.png" alt="Sass"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <a class="btn-link" href="#" data-app="alert-dongne1">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img long">
+                                        <img src="./image/dongne_rolling.png" alt="동네학원 랜딩페이지">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub notes" data-app="notes-jejudog" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">제주독</h3>
+                </div>
+            </div>
+            <div class="folder-body">
+                <!-- <div class="body-top">
+                    2024.10 ~ 2024.11
+                </div> -->
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="note-wrap">
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">제주독</h3>
+                                    <h4 class="tit2">제주독 사이트 구축</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2024/06 ~ 2024/06</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>100%</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">기획</span></dt>
+                                            <dd>개인 프로젝트 기획 및 반응형 웹 구조 설계</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">UI/UX디자인</span></dt>
+                                            <dd>로고 및 모바일 중심 UI 디자인 제작</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">퍼블리싱</span></dt>
+                                            <dd>반응형 웹 퍼블리싱 및 페이지 구현</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">프론트엔드</span></dt>
+                                            <dd>날씨 API 연동 및 시간대별 비주얼 변경 기능 구현</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">백엔드</span></dt>
+                                            <dd>MySQL 기반 회원·게시판 관리 기능 구현</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_illustrator.png" alt="일러스트레이터"></li>
+                                        <li><img src="./image/ico_photoshop.png" alt="포토샵"></li>
+                                        <li><img src="./image/ico_figma.png" alt="피그마"></li>
+                                        <li><img src="./image/ico_vscode.png" alt="비주얼스튜디오코드"></li>
+                                        <li><img src="./image/ico_mysql.png" alt="MySQL"></li>
+                                        <li><img src="./image/ico_php.png" alt="php"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_css.png" alt="CSS3"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                        <li><img src="./image/ico_bootstrap.png" alt="부트스트랩"></li>
+                                    </ul>
+                                </div>
+                                <div class="btns">
+                                    <a class="btn-link" href="#" data-app="alert-jejudog1">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                                    <a class="btn-link" href="https://www.notion.so/98f5c79527ca45e9b1ef8636dc4dc8b9?source=copy_link" title="새창열림" target="_blank">트러블 슈팅 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="img-box mini">
+                                <div class="mac-frame iphone">
+                                    <img src="./image/iphoneframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img long">
+                                        <img src="./image/jejudog_rolling.png" alt="제주독">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub notes" data-app="notes-todo" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">리액트 투두리스트</h3>
+                </div>
+            </div>
+            <div class="folder-body">
+                <!-- <div class="body-top">
+                    2024.10 ~ 2024.11
+                </div> -->
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="note-wrap">
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">리액트 투두리스트</h3>
+                                    <h4 class="tit2">리액트 투두리스트 구현</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2024/09 ~ 2024/09</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>100%
+                                                <span class="com_tag">기획</span>
+                                                <span class="com_tag">UI/UX디자인</span>
+                                                <span class="com_tag">퍼블리싱</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_figma.png" alt="피그마"></li>
+                                        <li><img src="./image/ico_vscode.png" alt="비주얼스튜디오코드"></li>
+                                        <li><img src="./image/ico_react.png" alt="리액트"></li>
+                                        <li><img src="./image/ico_css.png" alt="CSS3"></li>
+                                        <li><img src="./image/ico_javascript.png" alt="자바스크립트"></li>
+                                    </ul>
+                                </div>
+                                <div class="btns">
+                                    <a class="btn-link" href="https://kimjisu987.github.io/todolist/" title="새창열림" target="_blank">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                                    <a class="btn-link" href="https://www.notion.so/ffff3a26009a81dab0f7e7cf098ee10f?source=copy_link" title="새창열림" target="_blank">트러블 슈팅 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img">
+                                        <img src="./image/todo_rolling.png" alt="제주독">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub notes" data-app="notes-modong" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">모동숲 포트폴리오</h3>
+                </div>
+            </div>
+            <div class="folder-body">
+                <!-- <div class="body-top">
+                    2024.10 ~ 2024.11
+                </div> -->
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="note-wrap">
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">모동숲 포트폴리오</h3>
+                                    <h4 class="tit2">모동숲 포트폴리오 구현</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2024/09 ~ 2024/09</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>100%</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">기획</span></dt>
+                                            <dd>개인 포트폴리오 기획 및 “동 트기 전이 가장 어둡다” 컨셉 설계, 인터랙션 구조 구성</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">UI/UX디자인</span></dt>
+                                            <dd>모여봐요 동물의 숲 컨셉 참고하여 게임형 UI, 아이콘 및 전체 비주얼 디자인 제작</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">퍼블리싱</span></dt>
+                                            <dd>가로 스크롤 페이지(라이브러리 미사용) 및 반응형 웹 구현, 인터랙션(캐릭터 이동, 모달, 애니메이션) 개발</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_illustrator.png" alt="일러스트레이터"></li>
+                                        <li><img src="./image/ico_photoshop.png" alt="포토샵"></li>
+                                        <li><img src="./image/ico_figma.png" alt="피그마"></li>
+                                        <li><img src="./image/ico_vscode.png" alt="비주얼스튜디오코드"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_sass.png" alt="SASS"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <div class="btns">
+                                    <a class="btn-link" href="https://kimjisu987.github.io/portfoliogame/" title="새창열림" target="_blank">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                                    <a class="btn-link" href="https://www.notion.so/f4564dff5c934c1e81c8de7b94f3c2db?source=copy_link" title="새창열림" target="_blank">트러블 슈팅 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame horizon">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img">
+                                        <img src="./image/modong_rolling.png" alt="모동숲 포트폴리오">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub notes" data-app="notes-samsung" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">삼성중공업</h3>
+                </div>
+            </div>
+            <div class="folder-body">
+                <!-- <div class="body-top">
+                    2024.10 ~ 2024.11
+                </div> -->
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="note-wrap">
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">삼성중공업</h3>
+                                    <h4 class="tit2">삼성중공업 리뉴얼</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2024/05 ~ 2024/05</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>35%</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">기획</span></dt>
+                                            <dd>
+                                                프로젝트 기획서 작성 및 전체 방향성 설정
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">UI/UX 디자인</span></dt>
+                                            <dd>
+                                                기업 소개 페이지 및 채용 게시판 디자인
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">퍼블리싱</span></dt>
+                                            <dd>
+                                                기업 소개 페이지 구현 및 메인 페이지 수정·보완, 그누보드 기반 채용 게시판 협업
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_illustrator.png" alt="일러스트레이터"></li>
+                                        <li><img src="./image/ico_photoshop.png" alt="포토샵"></li>
+                                        <li><img src="./image/ico_figma.png" alt="피그마"></li>
+                                        <li><img src="./image/ico_vscode.png" alt="비주얼스튜디오코드"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_css.png" alt="CSS3"></li>
+                                        <li><img src="./image/ico_javascript.png" alt="자바스크립트"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <div class="btns">
+                                    <a class="btn-link" href="https://kimjisu987.github.io/samsungshi/" title="새창열림" target="_blank">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                                    <a class="btn-link" href="https://www.notion.so/102f3a26009a804ab488d68d9bc6a609?source=copy_link" title="새창열림" target="_blank">트러블 슈팅 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img long">
+                                        <img src="./image/samsung_rolling.png" alt="삼성중공업">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drag-folder sub notes" data-app="notes-sfa" style="display: none;">
+            <div class="folder-header">
+                <p class="circle-wrap">
+                    <a href="#" class="closeFolder"></a>
+                    <a href="#" class="miniFolder"></a>
+                    <a href="#" class="zoomFolder"></a>
+                </p>
+                <div class="txt-wrap">
+                    <h3 class="tit">SFA LMS 학습지원</h3>
+                </div>
+            </div>
+            <div class="folder-body">
+                <!-- <div class="body-top">
+                    2024.10 ~ 2024.11
+                </div> -->
+                <!-- 팝 1뎁스메뉴 -->
+                <div class="body-main">
+                    <div class="note-wrap">
+                        <div class="note-list">
+                            <div class="txt-box">
+                                <div class="txt-top">
+                                    <h3 class="tit1">SFA LMS 학습지원</h3>
+                                    <h4 class="tit2">SFA LMS 학습지원 구현</h4>
+                                    <div class="note-detail">
+                                        <dl>
+                                            <dt>투입 기간</dt>
+                                            <dd>2024/06 ~ 2024/08</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기여도</dt>
+                                            <dd>50%</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">기획</span></dt>
+                                            <dd>
+                                                LMS 시스템 설계, IA 및 DB 설계, 프로젝트 총괄
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">UI/UX디자인</span></dt>
+                                            <dd>
+                                                Figma 기반 로고·전체 UI 디자인 및 프로토타이핑
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">퍼블리싱</span></dt>
+                                            <dd>
+                                                사용자·관리자 페이지 퍼블리싱
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">프론트엔드</span></dt>
+                                            <dd>
+                                                회원·강의·상담·후기·수강신청 기능 구현
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span class="com_tag">백엔드</span></dt>
+                                            <dd>
+                                                회원·강의·상담·후기·수강신청 데이터 처리 및 관리자 기능 구현
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="tit2">기술 스택</h4>
+                                    <ul class="stack-list">
+                                        <li><img src="./image/ico_illustrator.png" alt="일러스트레이터"></li>
+                                        <li><img src="./image/ico_photoshop.png" alt="포토샵"></li>
+                                        <li><img src="./image/ico_figma.png" alt="피그마"></li>
+                                        <li><img src="./image/ico_vscode.png" alt="비주얼스튜디오코드"></li>
+                                        <li><img src="./image/ico_mysql.png" alt="MySQL"></li>
+                                        <li><img src="./image/ico_php.png" alt="PHP"></li>
+                                        <li><img src="./image/ico_html.png" alt="HTML5"></li>
+                                        <li><img src="./image/ico_sass.png" alt="SASS"></li>
+                                        <li><img src="./image/ico_javascript.png" alt="자바스크립트"></li>
+                                        <li><img src="./image/ico_jquery.png" alt="제이쿼리"></li>
+                                    </ul>
+                                </div>
+                                <div class="btns">
+                                    <a class="btn-link" href="https://kimjisu1.dothome.co.kr/sfa/" title="새창열림" target="_blank">홈페이지 바로가기 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                                    <a class="btn-link" href="https://www.notion.so/102f3a26009a801da013fbc9cdff157d?source=copy_link" title="새창열림" target="_blank">트러블 슈팅 <i class="ri-share-box-line" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <div class="mac-frame">
+                                    <img src="./image/macbookframe.png" alt="" class="frame-img">
+                                    <div class="rolling-img long">
+                                        <img src="./image/sfa_rolling.png" alt="SFA LMS 학습지원">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert" style="display: none;">
+            <div class="icon_box"></div>
+            <div class="txt_box">
+                <h3 class="tit">Title</h3>
+                <p class="txt">Description text about this alert is shown  here, explaining to users what the options underneath are about and what to do.</p>
+            </div>
+            <div class="btn_box">
+                <button type="button" class="modal_btn">닫기</button>
+                <button type="button" class="modal_btn">확인</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
